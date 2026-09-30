@@ -1,5 +1,11 @@
 # Release notes
 
+## 0.11.1: The current Claude models
+- **The model picker offers today's models.** Fable 5.1 is new, Opus and Sonnet
+  move to 5.5, and Haiku 4.5 stays. New sessions and agents start on Sonnet 5.5.
+- Sessions and agents made on an older model keep it — it still shows in the
+  picker until you choose another.
+
 ## 0.11.0: The code stops going stale behind your back
 - **A session on a fetched repository can now be brought up to date.** The git
   panel shows how old the snapshot is — "6d ago" — and clicking it fast-forwards

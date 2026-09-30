@@ -13,12 +13,13 @@ export const UPDATE_COMMAND = 'git pull && yarn setup:mac'
 
 /** Models offered in the UI; a session keeps any other model id it was created with. */
 export const FALLBACK_MODELS: ModelInfo[] = [
-  { id: 'claude-opus-5', displayName: 'Opus 5' },
-  { id: 'claude-sonnet-5', displayName: 'Sonnet 5' },
+  { id: 'claude-fable-5-1', displayName: 'Fable 5.1' },
+  { id: 'claude-opus-5-5', displayName: 'Opus 5.5' },
+  { id: 'claude-sonnet-5-5', displayName: 'Sonnet 5.5' },
   { id: 'claude-haiku-4-5', displayName: 'Haiku 4.5' }
 ]
 
-export const DEFAULT_MODEL = 'claude-sonnet-5'
+export const DEFAULT_MODEL = 'claude-sonnet-5-5'
 
 /** Muted, dusty tones — desaturated to sit beside the washed-white brand colour. */
 export const PROFILE_COLORS = [
