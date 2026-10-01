@@ -105,6 +105,9 @@ export class SessionRuntime {
       cwd: this.meta.cwd,
       systemPrompt,
       permissionMode: this.meta.permissionMode || this.profile.permissionMode,
+      // Only permits bypassPermissions; permissionMode still decides. Without it
+      // the SDK refuses a later switch to Full auto and keeps asking.
+      allowDangerouslySkipPermissions: true,
       allowedTools: this.profile.allowedTools.length > 0 ? this.profile.allowedTools : undefined,
       disallowedTools: this.profile.disallowedTools.length > 0 ? this.profile.disallowedTools : undefined,
       mcpServers: Object.keys(this.profile.mcpServers).length > 0 ? this.profile.mcpServers : undefined,
@@ -127,10 +130,6 @@ export class SessionRuntime {
       // A fork resumes the parent's conversation but must not write back into it.
       forkSession: this.meta.forkPending === true ? true : undefined,
       pathToClaudeCodeExecutable: resolvePackagedCli()
-    }
-
-    if ((this.meta.permissionMode || this.profile.permissionMode) === 'bypassPermissions') {
-      ;(options as Record<string, unknown>).allowDangerouslySkipPermissions = true
     }
 
     return options

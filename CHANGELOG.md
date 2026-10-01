@@ -1,5 +1,12 @@
 # Release notes
 
+## 0.11.2: Full auto means full auto
+- **Switching a running session to Full auto did nothing.** The agent kept
+  asking for permission while the composer showed the red Full auto badge, and
+  stayed that way until the app restarted. Only sessions that *started* in Full
+  auto skipped the prompts. The switch now takes effect immediately.
+- Default and Auto-edit are unchanged: they still ask exactly as before.
+
 ## 0.11.1: The current Claude models
 - **The model picker offers today's models.** Fable 5.1 is new, Opus and Sonnet
   move to 5.5, and Haiku 4.5 stays. New sessions and agents start on Sonnet 5.5.
